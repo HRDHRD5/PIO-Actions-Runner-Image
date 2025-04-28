@@ -6,4 +6,4 @@ WORKDIR /
 RUN curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py && python3 get-platformio.py
 
 # setting pio env
-RUN echo "source ~/.platformio/penv/bin/activate" > /root/.bashrc
+RUN ln -s ~/.platformio/penv/bin/activate ~/activate
